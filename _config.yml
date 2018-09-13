@@ -40,9 +40,9 @@ relative_link: false
 future: true
 highlight:
   enable: true
+  auto_detect: true
   line_number: true
-  auto_detect: false
-  tab_replace:
+  tab_replace: 2
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -73,8 +73,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
-
+theme: BlueLake
+stylus:
+  compress: true
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
