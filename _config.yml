@@ -8,7 +8,7 @@ subtitle: Path to become a developer
 description:
 keywords:
 author: Joseph Jin
-language:
+language: en
 timezone:
 
 # URL
@@ -81,3 +81,21 @@ stylus:
 deploy:
   type: git
   repo: git@github.com:jerkjoe/blog.git
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
