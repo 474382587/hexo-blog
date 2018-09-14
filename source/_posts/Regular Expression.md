@@ -1,3 +1,9 @@
+---
+title: Binary Search
+date: 2018-08-11 21:33:21
+tags:
+---
+
 # Regex
 
 > Regular expressions are used in programming languages to match parts of strings. 

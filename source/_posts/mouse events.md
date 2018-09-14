@@ -1,3 +1,9 @@
+---
+title: Binary Search
+date: 2018-09-01 15:44:34
+tags:
+---
+
 # MouseEvent
 
 1. `click`: mouse click

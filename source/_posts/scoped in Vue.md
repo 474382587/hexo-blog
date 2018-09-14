@@ -1,3 +1,9 @@
+---
+title: Binary Search
+date: 2018-08-12 10:11:54
+tags:
+---
+
 ## If you want to use `scoped` in .vue file and you import a third party component such as ElementUI and you wanna modify the style of it
 
 ## This is what you need to do:

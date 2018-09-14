@@ -1,3 +1,9 @@
+---
+title: Binary Search
+date: 2018-04-19 19:18:34
+tags:
+---
+
 I. Add: Mutating
 - array.push() adds an item to the end of the array
 - array.unshift() adds an item to the beginning of the array.

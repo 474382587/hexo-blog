@@ -1,3 +1,9 @@
+---
+title: Binary Search
+date: 2018-06-03 15:00:34
+tags:
+---
+
 # white-space
 
 ## /* Keyword values */

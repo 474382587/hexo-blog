@@ -1,3 +1,9 @@
+---
+title: Binary Search
+date: 2018-04-22 22:12:34
+tags:
+---
+
 # Here is a useful website I have discovered online
 
 https://picsum.photos/

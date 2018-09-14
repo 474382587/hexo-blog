@@ -1,3 +1,9 @@
+---
+title: Binary Search
+date: 2018-03-11 15:11:24
+tags:
+---
+
 # Live Server    
 
 A Live Server Launches a development local Server with live reload feature for static & dynamic pages.     

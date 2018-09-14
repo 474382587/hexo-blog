@@ -1,3 +1,9 @@
+---
+title: Binary Search
+date: 2018-05-13 15:17:34
+tags:
+---
+
 ```
 // OBJ
 var A = {
