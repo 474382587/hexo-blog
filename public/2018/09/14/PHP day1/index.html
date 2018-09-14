@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>PHP Day 1 | Joseph's Blog</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/blog/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/blog/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/blog/favicon.ico"><link rel="bookmark" href="/blog/favicon.ico"><link rel="apple-touch-icon" href="/blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/blog/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">PHP Day 1</h1><a id="logo" href="/blog/.">Joseph's Blog</a><p class="description">Path to become a developer</p></div><div id="nav-menu"><a href="/blog/." class="current"><i class="fa fa-home"> Home</i></a><a href="/blog/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/blog/about/"><i class="fa fa-user"> About</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">PHP Day 1</h1><div class="post-meta"><a href="/blog/2018/09/14/PHP day1/#comments" class="comment-count"></a><p><span class="date">Sep 14, 2018</span></p></div><div class="post-content"><h1 id="PHP-Day-1"><a href="#PHP-Day-1" class="headerlink" title="PHP Day 1"></a>PHP Day 1</h1><h2 id="Why-PHP"><a href="#Why-PHP" class="headerlink" title="Why PHP?"></a>Why PHP?</h2><ol>
+<li>Easy</li>
+<li>Suitable for WEB development</li>
+<li>WordPress</li>
+<li>Large user group</li>
+<li>Compatablility - Server - Database</li>
+</ol>
+<h2 id="What-for"><a href="#What-for" class="headerlink" title="What for?"></a>What for?</h2><ol>
+<li>Interactive websites</li>
+</ol>
+<h2 id="How-to-study-PHP"><a href="#How-to-study-PHP" class="headerlink" title="How to study PHP?"></a>How to study PHP?</h2><ul>
+<li>3W1H1P<ul>
+<li>What is it?</li>
+<li>Why would I learn it?</li>
+<li>When can I use it?</li>
+<li>How to use it?</li>
+<li>Practice it.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Learn-to-code"><a href="#Learn-to-code" class="headerlink" title="Learn to code"></a>Learn to code</h2><ul>
+<li>Practice more</li>
+<li>Think more</li>
+<li>Ask more</li>
+</ul>
+<h2 id="PHP-Development-Environment"><a href="#PHP-Development-Environment" class="headerlink" title="PHP Development Environment"></a>PHP Development Environment</h2><ul>
+<li>LAMP - Linux + Apache + MySQL + PHP</li>
+<li>LNMP - Linux + Nginx + MySQL + PHP</li>
+<li>LNMPA - Linux + Nginx + MySQL + PHP + Apache</li>
+<li>WAMP - Window + Apache + MySQL + PHP</li>
+</ul>
+<hr>
+<h2 id="PHP-Syntax"><a href="#PHP-Syntax" class="headerlink" title="PHP Syntax"></a>PHP Syntax</h2><ul>
+<li>Extension: .php, <strong>cannot use special characters</strong></li>
+<li>PHP style:<ul>
+<li>standard: &lt;?php code; ?&gt;</li>
+<li>Short Open tag: &lt;? code; ?&gt;</li>
+<li>ASP: &lt;% code; %&gt;</li>
+</ul>
+</li>
+<li>If only <code>PHP</code> code inside a file, <code>?&gt;</code> should be omitted</li>
+<li><code>;</code> after each line of code</li>
+<li>comments<ul>
+<li>single line: 1. <code>// code</code> 2. <code># code</code></li>
+<li>multiple lines: <code>/* code */</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h2><ul>
+<li>Decalare a variable: <code>$variable_name;</code>, <code>$number = 1;</code></li>
+<li>Start with <code>alphabet or _, no special characters</code></li>
+<li>Camel case: <code>helloWord</code></li>
+<li>Underscore: <code>hello_world</code></li>
+<li>Case sensitive</li>
+<li>Variable variables: <code>&lt;?php $a = &#39;hello&#39;; $$a = &#39;world&#39;; echo $$a . &#39;&lt;br /&gt;&#39;; echo &quot;$a ${$a} &lt;br /&gt;</code></li>
+<li>Variable types:<ul>
+<li>Int<ul>
+<li>decimal</li>
+<li>hex</li>
+<li>oct</li>
+<li>binary</li>
+<li>signed</li>
+<li>unsigned<br>-Float</li>
+<li>scientific</li>
+<li>.number</li>
+<li>has error –&gt; don’t compare 2 float values</li>
+</ul>
+</li>
+<li>Boolean<ul>
+<li>true</li>
+<li>false</li>
+</ul>
+</li>
+<li>String<ul>
+<li>single quote –&gt; what you entered is what you will get except \’, \<ul>
+<li><code>&quot;$var this variable will not be showing up&quot;</code></li>
+</ul>
+</li>
+<li>double quote<ul>
+<li><code>&quot;$var this variable will be showing up&quot;</code></li>
+</ul>
+</li>
+<li>heredoc<ul>
+<li><code>$str = &lt;&lt;&lt;EOF string_paragraph EOF;</code> –&gt; “”</li>
+</ul>
+</li>
+<li>nowdoc<ul>
+<li><code>$str = &lt;&lt;&lt;EOF string_paragraph EOF;</code> –&gt; ‘’</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Array</li>
+<li>Object</li>
+<li>Resource</li>
+<li>null – undefined variable or assigned to be null or <code>unset()</code> –&gt; discard variable value</li>
+</ul>
+</li>
+<li><code>var_dump($var);</code> –&gt; info about this variable</li>
+<li><code>header</code> –&gt; <code>header()</code></li>
+<li><code>\n</code> –&gt; new line, <code>\r</code> –&gt; enter, <code>\t</code> –&gt; tab, <code>\\</code> –&gt; \, <code>\&#39;</code> –&gt; ‘, <code>\&quot;</code> –&gt; “ </li>
+<li>{} –&gt; <code>$string = &#39;abc&#39;;</code></li>
+</ul>
+</div><div class="tags"></div><div class="post-share"></div><div class="post-nav"><a href="/blog/2018/09/13/Binary-Search/" class="next">Binary Search</a></div><div id="comments"></div></div></div></div><div class="layout-r hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-xie"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/14/PHP day1/">PHP Day 1</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/13/Binary-Search/">Binary Search</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/01/mouse events/">Mouse Event</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/08/12/scoped in Vue/">Scope in Vue</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/08/11/Regular Expression/">Regular Expression</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/06/03/CSS_ white-space/">CSS white-space</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/05/23/Extract Text Webpack Plugin/">Extract Text Webpack Plugin</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/05/13/Object method/">Object Methods</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/04/22/Placeholder Images/">Placeholder Images</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/04/19/JavaScript Array Methods_ Mutating vs. Non-Mutating/">Array Methods</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> Archive</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/01/">January 2018</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> Blogroll</i></div><ul></ul><a href="https://developer.mozilla.org" title="MDN" target="_blank">MDN</a><ul></ul><a href="https://reactjs.org/" title="React" target="_blank">React</a><ul></ul><a href="https://vuejs.org/" title="Vue" target="_blank">Vue</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/blog/about/">About</a></p><p><span> Copyright &copy;<a href="/blog/." rel="nofollow">Joseph Jin.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script type="text/javascript" src="/blog/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/blog/js/toctotop.js?v=2.0.1" async></script></body></html>
