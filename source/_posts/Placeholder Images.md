@@ -1,5 +1,5 @@
 ---
-title: Binary Search
+title: Placeholder Images
 date: 2018-04-22 22:12:34
 tags:
 ---

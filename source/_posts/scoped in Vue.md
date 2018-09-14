@@ -1,5 +1,5 @@
 ---
-title: Binary Search
+title: Scope in Vue
 date: 2018-08-12 10:11:54
 tags:
 ---

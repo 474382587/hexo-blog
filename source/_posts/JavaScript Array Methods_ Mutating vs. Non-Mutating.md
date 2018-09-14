@@ -1,5 +1,5 @@
 ---
-title: Binary Search
+title: Array Methods
 date: 2018-04-19 19:18:34
 tags:
 ---

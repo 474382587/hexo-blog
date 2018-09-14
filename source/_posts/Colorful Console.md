@@ -1,5 +1,5 @@
 ---
-title: Binary Search
+title: Colorful Console
 date: 2018-01-13 15:17:34
 tags:
 ---

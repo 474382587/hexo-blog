@@ -1,5 +1,5 @@
 ---
-title: Binary Search
+title: Extract Text Webpack Plugin
 date: 2018-05-23 11:12:01
 tags:
 ---

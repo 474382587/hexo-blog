@@ -1,5 +1,5 @@
 ---
-title: Binary Search
+title: Object Methods
 date: 2018-05-13 15:17:34
 tags:
 ---

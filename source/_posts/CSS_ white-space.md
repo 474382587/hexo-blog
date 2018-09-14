@@ -1,5 +1,5 @@
 ---
-title: Binary Search
+title: CSS white-space
 date: 2018-06-03 15:00:34
 tags:
 ---
