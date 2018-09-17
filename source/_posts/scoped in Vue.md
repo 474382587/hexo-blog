@@ -1,7 +1,7 @@
 ---
 title: Scope in Vue
 date: 2018-08-12 10:11:54
-tags:
+tags: [Vue, CSS, Less]
 ---
 
 ## If you want to use `scoped` in .vue file and you import a third party component such as ElementUI and you wanna modify the style of it

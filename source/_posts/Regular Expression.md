@@ -1,7 +1,7 @@
 ---
 title: Regular Expression
 date: 2018-08-11 21:33:21
-tags:
+tags: [JavaScript]
 ---
 
 # Regex

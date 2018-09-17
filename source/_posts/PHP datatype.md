@@ -1,3 +1,8 @@
+---
+title: PHP Data Type Conversion
+date: 2018-09-14 11:22:07
+tags: [PHP]
+---
 ## Temperary
 - Integer: `(int|integer)$var;`
 - Float: `(float|double|real)$var;`

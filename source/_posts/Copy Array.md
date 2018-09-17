@@ -1,7 +1,7 @@
 ---
 title: Copy Array
 date: 2018-02-11 15:17:34
-tags:
+tags: [JavaScript]
 ---
 
 1. `var copyArr = arr.slice(0)`

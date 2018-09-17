@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>PHP Operators &amp; Expressions | Joseph's Blog</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/blog/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/blog/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/blog/favicon.ico"><link rel="bookmark" href="/blog/favicon.ico"><link rel="apple-touch-icon" href="/blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/blog/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">PHP Operators &amp; Expressions</h1><a id="logo" href="/blog/.">Joseph's Blog</a><p class="description">Path to become a developer</p></div><div id="nav-menu"><a href="/blog/." class="current"><i class="fa fa-home"> Home</i></a><a href="/blog/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/blog/about/"><i class="fa fa-user"> About</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">PHP Operators &amp; Expressions</h1><div class="post-meta"><a href="/blog/2018/09/17/PHP Operators &amp; Expressions/#comments" class="comment-count"></a><p><span class="date">Sep 17, 2018</span></p></div><div class="post-content"><h2 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h2><ul>
+<li>Arithmatic Operators<ul>
+<li><code>+  -  *   /  %</code>, PHP7 –&gt; <code>**</code> (power of)</li>
+<li>increment/decrement<ul>
+<li>++$var</li>
+<li>–$var</li>
+<li>$var–</li>
+<li>$var++</li>
+<li>Types<ul>
+<li>float –&gt; yes</li>
+<li>int –&gt; yes</li>
+<li>bool –&gt; not support this operator</li>
+<li>null –&gt; only support increment</li>
+<li>string –&gt; only support increment –&gt; last character</li>
+<li>get ASCII code <code>ord($str)</code></li>
+<li>get Character based on ASCII code <code>chr(98)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>String Operators<ul>
+<li>Concatenation Operator –&gt; <code>.</code><ul>
+<li><code>$str1.$str2.$str3</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Assignment Operators<ul>
+<li>Example:<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$a = <span class="number">3</span>; </span><br><span class="line">$a += <span class="number">5</span>; <span class="comment">// sets $a to 8, as if we had said: $a = $a + 5;</span></span><br><span class="line">$b = <span class="string">"Hello "</span>;</span><br><span class="line">$b .= <span class="string">"There!"</span>; <span class="comment">// sets $b to "Hello There!", just like $b = $b . "There!";</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Compare Operators<ul>
+<li>Return boolean value</li>
+<li>Example:<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$a == $b	<span class="comment">// Equal	TRUE if $a is equal to $b after type juggling.</span></span><br><span class="line">$a === $b	<span class="comment">// Identical	TRUE if $a is equal to $b, and they are of the same type.</span></span><br><span class="line">$a != $b	<span class="comment">// Not equal	TRUE if $a is not equal to $b after type juggling.</span></span><br><span class="line">$a &lt;&gt; $b	<span class="comment">// Not equal	TRUE if $a is not equal to $b after type juggling.</span></span><br><span class="line">$a !== $b	   <span class="comment">// Not identical	TRUE if $a is not equal to $b, or they are not of the same type.</span></span><br><span class="line">$a &lt; $b	      <span class="comment">// Less than	TRUE if $a is strictly less than $b.</span></span><br><span class="line">$a &gt; $b	      <span class="comment">// Greater than	TRUE if $a is strictly greater than $b.</span></span><br><span class="line">$a &lt;= $b	<span class="comment">// Less than or equal to	TRUE if $a is less than or equal to $b.</span></span><br><span class="line">$a &gt;= $b	<span class="comment">// Greater than or equal to	TRUE if $a is greater than or equal to $b.</span></span><br><span class="line">$a &lt;=&gt; $b	<span class="comment">// Spaceship	An integer less than, equal to, or greater than zero when $a is respectively less than, equal to, or greater than $b. Available as of PHP 7.</span></span><br><span class="line">$a ?? $b ?? $c <span class="comment">// null detection, if not null, return not null value --&gt; PHP 7</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Logic Operators<ul>
+<li>Examples:<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$a <span class="keyword">and</span> $b	<span class="comment">// And	TRUE if both $a and $b are TRUE.</span></span><br><span class="line">$a <span class="keyword">or</span> $b	<span class="comment">// Or	TRUE if either $a or $b is TRUE.</span></span><br><span class="line">$a <span class="keyword">xor</span> $b	<span class="comment">// Xor	TRUE if either $a or $b is TRUE, but not both.</span></span><br><span class="line">! $a	        <span class="comment">// Not	TRUE if $a is not TRUE.</span></span><br><span class="line">$a &amp;&amp; $b	<span class="comment">// And	TRUE if both $a and $b are TRUE.</span></span><br><span class="line">$a || $b	<span class="comment">// Or	TRUE if either $a or $b is TRUE.</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Error Control Operators<ul>
+<li><code>@</code> </li>
+<li>Add this <code>@</code> before any expression that will lead to an error –&gt; error message will not show up</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Ternary Operator<ul>
+<li><code>condition ? satisfied : not satisfied</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">non-associative	<span class="comment">//clone new	clone and new</span></span><br><span class="line">left	<span class="comment">//[	array()</span></span><br><span class="line">right	<span class="comment">//**	arithmetic</span></span><br><span class="line">right	<span class="comment">//++ -- ~ (int) (float) (string) (array) (object) (bool) @	types and increment/decrement</span></span><br><span class="line">non-associative   <span class="comment">//instanceof	types</span></span><br><span class="line">right	<span class="comment">//!	logical</span></span><br><span class="line">left	<span class="comment">//* / %	arithmetic</span></span><br><span class="line">left	<span class="comment">//+ - .	arithmetic and string</span></span><br><span class="line">left	<span class="comment">//&lt;&lt; &gt;&gt;	bitwise</span></span><br><span class="line">non-associative	<span class="comment">//&lt; &lt;= &gt; &gt;=	comparison</span></span><br><span class="line">non-associative	<span class="comment">//== != === !== &lt;&gt; &lt;=&gt;	comparison</span></span><br><span class="line">left	<span class="comment">//&amp;	bitwise and references</span></span><br><span class="line">left	<span class="comment">//^	bitwise</span></span><br><span class="line">left	<span class="comment">//|	bitwise</span></span><br><span class="line">left	<span class="comment">//&amp;&amp;	logical</span></span><br><span class="line">left	<span class="comment">//||	logical</span></span><br><span class="line">right	<span class="comment">//??	comparison</span></span><br><span class="line">left	<span class="comment">//? :	ternary</span></span><br><span class="line">right	<span class="comment">//= += -= *= **= /= .= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;=	assignment</span></span><br><span class="line">left	<span class="comment">//and	logical</span></span><br><span class="line">left	<span class="comment">//xor	logical</span></span><br><span class="line">left	<span class="comment">//or	logical</span></span><br></pre></td></tr></table></figure></div><div class="tags"><a href="/blog/tags/PHP/">PHP</a></div><div class="post-share"></div><div class="post-nav"><a href="/blog/2018/09/17/PHP Predefined Variable/" class="next">PHP Predefined Variable</a></div><div id="comments"></div></div></div></div><div class="layout-r hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-xie"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/17/PHP Operators & Expressions/">PHP Operators & Expressions</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/17/PHP Predefined Variable/">PHP Predefined Variable</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/16/PHP const/">PHP Const</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/14/PHP Datatype conversion/">PHP Datatype conversion</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/14/PHP datatype/">PHP Data Type Conversion</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/14/PHP functions/">PHP functions</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/14/PHP Control Structures/">PHP Control Structures</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/14/PHP day1/">PHP Day 1</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/14/Placeholder Images/">Placeholder Images</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/13/Binary-Search/">Binary Search</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> Tags</i></div><div class="tagcloud"><a href="/blog/tags/Tools/" style="font-size: 15px;">Tools</a> <a href="/blog/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/blog/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/blog/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/blog/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/blog/tags/DOM/" style="font-size: 15px;">DOM</a> <a href="/blog/tags/Event/" style="font-size: 15px;">Event</a> <a href="/blog/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/blog/tags/Less/" style="font-size: 15px;">Less</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> Archive</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/01/">January 2018</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> Blogroll</i></div><ul></ul><a href="https://developer.mozilla.org" title="MDN" target="_blank">MDN</a><ul></ul><a href="https://reactjs.org/" title="React" target="_blank">React</a><ul></ul><a href="https://vuejs.org/" title="Vue" target="_blank">Vue</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/blog/about/">About</a></p><p><span> Copyright &copy;<a href="/blog/." rel="nofollow">Joseph Jin.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script type="text/javascript" src="/blog/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/blog/js/toctotop.js?v=2.0.1" async></script></body></html>

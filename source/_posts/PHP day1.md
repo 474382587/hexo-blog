@@ -1,7 +1,7 @@
 ---
 title: PHP Day 1
 date: 2018-09-14 11:15:07
-tags:
+tags: [PHP]
 ---
 
 # PHP Day 1

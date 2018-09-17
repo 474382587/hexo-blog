@@ -1,7 +1,7 @@
 ---
 title: Binary Search
 date: 2018-09-13 15:17:34
-tags:
+tags: [JavaScript, Algorithm]
 ---
 
 

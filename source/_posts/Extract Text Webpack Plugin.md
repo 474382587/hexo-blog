@@ -1,7 +1,7 @@
 ---
 title: Extract Text Webpack Plugin
 date: 2018-05-23 11:12:01
-tags:
+tags: [Tools]
 ---
 Use this plugin to extract CSS file from compiled js file. (Production)
 Or use style-loader for Dev environment
