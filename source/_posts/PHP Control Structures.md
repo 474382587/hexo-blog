@@ -221,3 +221,15 @@ tags: [PHP]
       }
       ?>
     ```
+
+  - **goto The goto operator can be used to jump to another section in the program.**
+  - Cannot jump into `for loop, while loop, switch statement, class, function`
+    ```php
+      <?php
+      goto a;
+      echo 'Foo';
+      
+      a: // The target point is specified by a label followed   by a colon, and the instruction is given as goto followed by the desired target label. This is not a full unrestricted goto. 
+      echo 'Bar';
+      ?>
+    ```
