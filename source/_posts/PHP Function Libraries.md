@@ -145,7 +145,86 @@ tags: [PHP]
 - `min(array $values)` --> max value
 - `rand() | rand ( int $min , int $max )` --> random number
 - `mt_rand() | mt_rand ( int $min , int $max )` --> mt_rand — Generate a random value via the Mersenne Twister Random Number Generator -- random number
-- 
+- `round($float, $precision[optional]` --> round a float number, if second parameter is not provided, then its precision will be 0
+- `number_format($float, [$decimal])` --> seperate by comma --> 1000 -> 1,000
+  
 ---
+### Common Date Functions
+- `date ( string $format [, int $timestamp = time() ] )`  -> Returns a string formatted according to the given format string using the given integer timestamp or the current time if no timestamp is given. In other words, timestamp is optional and defaults to the value of time().
 
+- `date_default_timezone_set ( string $timezone_identifier )` --> sets the default timezone used by all date/time functions.
+  ```php
+  <?php
+  date_default_timezone_set('America/Los_Angeles');
+
+  $script_tz = date_default_timezone_get();
+
+  if (strcmp($script_tz, ini_get('date.timezone'))){
+      echo 'Script timezone differs from ini-set timezone.';
+  } else {
+      echo 'Script timezone and ini-set timezone match.';
+  }
+  ?>
+  ```
+- `date_default_timezone_get()` --> will return a default timezone.
+- `time()` --> return timestamp from 1970.1.1
+- `strtotime ( string $time [, int $now = time() ] )` --> string to time stamp
+    ```php
+    <?php
+    echo strtotime("now"), "\n";
+    echo strtotime("10 September 2000"), "\n";
+    echo strtotime("+1 day"), "\n";
+    echo strtotime("+1 week"), "\n";
+    echo strtotime("+1 week 2 days 4 hours 2 seconds"), "\n";
+    echo strtotime("next Thursday"), "\n";
+    echo strtotime("last Monday"), "\n";
+    ?>
+    ```
+- `microtime ([ bool $get_as_float = FALSE ] )` --> returns the current Unix timestamp with microseconds.
+  ```php
+  <?php
+  /**
+  * Simple function to replicate PHP 5 behaviour
+  */
+  function microtime_float()
+  {
+      list($usec, $sec) = explode(" ", microtime());
+      return ((float)$usec + (float)$sec);
+  }
+
+  $time_start = microtime_float();
+
+  // Sleep for a while
+  usleep(100);
+
+  $time_end = microtime_float();
+  $time = $time_end - $time_start;
+
+  echo "Did nothing in $time seconds\n";
+  ?>
+  ```
+- `uniqid ([ string $prefix = "" [, bool $more_entropy = FALSE ]] )` --> Gets a prefixed unique identifier based on the current time in microseconds.
+  ```php
+  <?php
+  /* A uniqid, like: 4b3403665fea6 */
+  printf("uniqid(): %s\r\n", uniqid());
+
+  /* We can also prefix the uniqid, this the same as 
+  * doing:
+  *
+  * $uniqid = $prefix . uniqid();
+  * $uniqid = uniqid($prefix);
+  */
+  printf("uniqid('php_'): %s\r\n", uniqid('php_'));
+
+  /* We can also activate the more_entropy parameter, which is 
+  * required on some systems, like Cygwin. This makes uniqid()
+  * produce a value like: 4b340550242239.64159797
+  */
+  printf("uniqid('', true): %s\r\n", uniqid('', true));
+  ?>
+  ```
+  - uuid ==> `md5(uniqid(microtime.mt_rand()));`
+- `get_date()` --> return array of date info
+---
 ## User Functions
