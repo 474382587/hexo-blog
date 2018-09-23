@@ -114,3 +114,24 @@ $name = "name";
 $age = 33;
 $arr = compact('name','age');
 ```
+
+
+---
+using `define` and `const` declare constant array
+```php
+const arr = array(1,2,3);
+
+define("test", array(1,2,3));
+
+// they both are constant array
+```
+
+
+---
+Using Array
+- Using array by key value
+```php
+$arr == ['a','b','c'];
+// $arr[key_name] ==> 
+$arr[1];
+$arr{1};
