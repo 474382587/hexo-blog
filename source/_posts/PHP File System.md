@@ -31,7 +31,7 @@ tags: [PHP]
 --- 
 ## Read and Write 
 - `fopen()` open a file with specific mode
-  > `r`, `r+`, `w`, `w+`, `a+`
+  > `r`, `r+`, `w`, `w+`, `a+` 
 - `fread()` read a file
 - `fwrite()` write a file
 - `ftell()` --> return pointer index
