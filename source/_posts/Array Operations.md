@@ -1,5 +1,5 @@
 ---
-title: PHP Array
+title: PHP Array Traversal
 date: 2018-09-21 22:57:34
 tags: [PHP, Array]
 ---
