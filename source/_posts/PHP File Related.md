@@ -258,7 +258,7 @@ tags: [PHP]
 ```php
 <?php
   /**
-  * Write content from file
+  * Write content to file
   * @method writeFile
   * @param string $fileName, $data
   * @return file content
@@ -271,7 +271,62 @@ tags: [PHP]
     if(is_array($data) || is_object($data)) {
       $data = serialize($data);
     }
-    if(file_put_contents !== false) {
+    if(file_put_contents($fileName, $data) !== false) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+?>
+```
+---
+```php
+<?php
+  /**
+  * Write content to file
+  * @method writeFile
+  * @param string $fileName, $clearFlag, $data
+  * @return file content
+  */
+  function writeFile(string $fileName, $data, $clearFlag = false) {
+    $dirName = dirname($fileName);
+    if(!file_exists($dirName)) {
+      mkdir($dirName, 0777, true);
+    }
+    if(is_file($fileName) && is_readable($fileName)) {
+      if(filesize($fileName) > 0) {
+        $srcData = file_get_contents($fileName);
+      }
+    }
+    if(is_array($data) || is_object($data)) {
+      $data = serialize($data);
+    }
+    $data = srcData.$data;
+    if(file_put_contents($fileName, $data) !== false) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+?>
+```
+---
+```php
+<?php
+  /**
+  * Truncate content from file
+  * @method truncateFile
+  * @param string $fileName, int $length
+  * @return file content
+  */
+  function truncateFile(string $fileName, int $length) {
+    if(is_file($fileName) && is_writeable($fileName)) {
+      $handle = fopen($fileName, 'rb+');
+      $length < 0 ? 0 : $length;
+      ftruncate($fileName, $length);
+      fclose($fileName);
       return true;
     }
     else {
