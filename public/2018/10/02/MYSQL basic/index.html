@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>MySQL Basics | Joseph's Blog</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/blog/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/blog/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/blog/favicon.ico"><link rel="bookmark" href="/blog/favicon.ico"><link rel="apple-touch-icon" href="/blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/blog/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MySQL Basics</h1><a id="logo" href="/blog/.">Joseph's Blog</a><p class="description">Path to become a developer</p></div><div id="nav-menu"><a href="/blog/." class="current"><i class="fa fa-home"> Home</i></a><a href="/blog/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/blog/about/"><i class="fa fa-user"> About</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">MySQL Basics</h1><div class="post-meta"><a href="/blog/2018/10/02/MYSQL basic/#comments" class="comment-count"></a><p><span class="date">Oct 02, 2018</span></p></div><div class="post-content"><h1 id="MySQL-Basics"><a href="#MySQL-Basics" class="headerlink" title="MySQL Basics"></a>MySQL Basics</h1><ul>
+<li>Config file –&gt; my.cnf</li>
+<li>Login –&gt; 1. command line <code>mysql -uroot -p</code> then enter password 2. <code>mysql -uroot -ppassword</code></li>
+<li>Logout –&gt; 1. <code>exit</code><ol start="2">
+<li><code>quit</code></li>
+<li>\q</li>
+</ol>
+</li>
+<li>Login <code>mysql -h&quot;host_address&quot; -uroot -p -P3306</code> –&gt; add host and port number</li>
+<li>login and open a DB <code>mysql -uroot -p -D db_name</code></li>
+</ul>
+<p>Common SQL</p>
+<ul>
+<li><code>SELECT USER();</code> –&gt; Login User Info</li>
+<li><code>SELECT VERSION();</code> –&gt;MYSQL Version</li>
+<li><code>SELECT NOW();</code> –&gt; Get current date time</li>
+<li><code>SELECT DATABASE();</code> –&gt; Get current Database</li>
+</ul>
+<h2 id="Create-database"><a href="#Create-database" class="headerlink" title="Create database"></a>Create database</h2><ol>
+<li><code>CREATE DATABASE db_name;</code></li>
+<li><code>CREATE SCHEMA db_name;</code></li>
+<li><code>CREATE DATABASE IF NOT EXISTS db_name;</code></li>
+<li><code>CREATE DATABASE IF NOT EXISTS db_name DEFAULT CHARACTER SET &#39;UTF8&#39;;</code></li>
+</ol>
+<hr>
+<h2 id="Show-all-databases"><a href="#Show-all-databases" class="headerlink" title="Show all databases"></a>Show all databases</h2><p><code>SHOW DATABASES;</code><br><code>SHOW SCHEMAS;</code></p>
+<hr>
+<h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><p><code>SHOW WARNINGS</code><br><code>SHOW CREATE DATABSE db_name;</code><br>Modify DATABASE <code>ALTER DATABSE db_name DEFAULT CHARACTER SET=charset;</code><br>Open sepcific db: <code>USE db_name;</code><br>Select current db –&gt; <code>SELECT DATABASE();</code><br>Delete a db –&gt; <code>DROP DATABSE db_name;</code> –&gt; <code>DROP DATABSE db_name IF EXISTS;</code></p>
+<hr>
+<h2 id="TABLES"><a href="#TABLES" class="headerlink" title="TABLES"></a>TABLES</h2><blockquote>
+<p>Includes <code>ROW</code> and <code>COLUMN</code><br>At least has one <code>COLUMN</code>, <code>ROW</code> can be 0<br>Has to be unique</p>
+</blockquote>
+<p>Type:   </p>
+<ul>
+<li>Number<ul>
+<li>Integer<ul>
+<li>TINYINT </li>
+<li>SMALLINT</li>
+<li>MEDIUMINT</li>
+<li>INT</li>
+<li>BIGINT</li>
+<li>BOOL,BOOLEAN</li>
+</ul>
+</li>
+<li>Float<ul>
+<li>FLOAT</li>
+<li>DOUBLE</li>
+<li>DECIMAL</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>String<ul>
+<li>CHAR</li>
+<li>VARCHAR</li>
+<li>TINYTEXT</li>
+<li>TEXT</li>
+<li>MEDIUMTEXT</li>
+<li>LONGTEXT</li>
+<li>ENUM(‘value1’, ‘value2’, …)</li>
+<li>SET(‘value1’, ‘value2’, …)</li>
+</ul>
+</li>
+<li>Date <ul>
+<li>TIME</li>
+<li>DATE</li>
+<li>DATETIME</li>
+<li>TIMESTAMP</li>
+<li>YEAR</li>
+</ul>
+</li>
+</ul>
+<p>Create table:</p>
+<ul>
+<li><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> table_name(</span><br><span class="line">  <span class="keyword">name</span> <span class="keyword">type</span> conditions</span><br><span class="line">  username </span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="string">""</span> <span class="keyword">CHARSET</span>=<span class="string">""</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</div><div class="tags"><a href="/blog/tags/MySQL/">MySQL</a></div><div class="post-share"></div><div class="post-nav"><a href="/blog/2018/10/01/PHP SQL/" class="next">PHP SQL</a></div><div id="comments"></div></div></div></div><div class="layout-r hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-xie"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2018/10/02/MYSQL basic/">MySQL Basics</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/10/01/PHP SQL/">PHP SQL</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/30/PHP File Related/">PHP File Related</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/29/PHP CSV/">PHP CSV</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/26/PHP Session/">PHP Session</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/25/PHP File System/">PHP File System</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/21/Array Operations/">PHP Array Traversal</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/19/PHP Array/">PHP Array</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/19/Array Remove Duplicates/">JavaScript Array Remove Duplicates</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2018/09/19/Placeholder Images/">Placeholder Images</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> Tags</i></div><div class="tagcloud"><a href="/blog/tags/Array/" style="font-size: 15px;">Array</a> <a href="/blog/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/blog/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/blog/tags/Tools/" style="font-size: 15px;">Tools</a> <a href="/blog/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/blog/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/blog/tags/DOM/" style="font-size: 15px;">DOM</a> <a href="/blog/tags/Event/" style="font-size: 15px;">Event</a> <a href="/blog/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/blog/tags/Less/" style="font-size: 15px;">Less</a> <a href="/blog/tags/MySQL/" style="font-size: 15px;">MySQL</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> Archive</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/01/">January 2018</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> Blogroll</i></div><ul></ul><a href="https://developer.mozilla.org" title="MDN" target="_blank">MDN</a><ul></ul><a href="https://reactjs.org/" title="React" target="_blank">React</a><ul></ul><a href="https://vuejs.org/" title="Vue" target="_blank">Vue</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/blog/about/">About</a></p><p><span> Copyright &copy;<a href="/blog/." rel="nofollow">Joseph Jin.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script type="text/javascript" src="/blog/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/blog/js/toctotop.js?v=2.0.1" async></script></body></html>

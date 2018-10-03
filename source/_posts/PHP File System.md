@@ -31,7 +31,7 @@ tags: [PHP]
 --- 
 ## Read and Write 
 - `fopen()` open a file with specific mode
-  > `r`, `r+`, `w`, `w+`, `a+` 
+  > `r`, `r+`, `w`, `w+`, `a+`
 - `fread()` read a file
 - `fwrite()` write a file
 - `ftell()` --> return pointer index
@@ -45,3 +45,11 @@ tags: [PHP]
 - `fgetss()` --> get a line and remove html tags
 - `feof()` --> return true if reach end of file
 - `strip_tags()` --> remove tags
+
+---
+- `file_get_contents()` --> read all content from file into a string
+- `file_put_contents()` --> write content to a file, will overwrite previous content, if file does not exist, it will be created
+- `serialize()` --> serialize array 
+- `serialize` --> unserialze content
+- `json_encode()` --> transform to json
+- `json_decode` --> transform from json
