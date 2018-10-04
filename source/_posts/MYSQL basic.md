@@ -88,3 +88,49 @@ Create table:
     username 
   )ENGINE="" CHARSET="";
   ```
+
+  ---
+  ```sql
+    USE mydatabase; 
+    CREATE TABLE IF NOT EXIST user(
+      id INT,
+      username, VARCHAR(20),
+      password CHAR(32),
+      email VARCHAR(50),
+      card CHAR(18),
+      tel CHAR(11),
+      salary FLOAT(8,2),
+      married TINYINT(1),
+      gender ENUM('Male', 'Female', 'Unknow'),
+      addr VARCHAR(100)
+    )ENGINE=INNODB CHARSET=UTF8;
+
+  ```
+  ## Look current tables
+  - `SHOW TABLES;`    
+  - `SHOW CREATE TABLE table_name;` --> show create table details - `DESC table_name;` ---> show structure of the table
+  - `DESCRIBE table_name;` ---> show structure of the table
+  - `SHOW COLUMNS FROM table_name;` ---> show structure of the table
+ 
+  ## delete table
+  - `DROP TABLE IF EXISTS table_name;`
+ 
+ ```sql
+ SHOW TABLES;
+ SHOW TABLES FROM users;
+ DESC users;
+ DESCRIBE users;
+ SHOW COLUMNS FROM users;
+ DROP TABLE IF EXISTS users;
+ ```
+
+## constraints
+- unsigned -> no negative, from 0
+- zerofill -> use 0 to fill unfilled digits
+- NOT NULL -> cannot be empty
+- DEFAUL -> default value
+- PRIMARY KEY -> unique, one table each
+- UNIQUE KEY -> unique(except null), can have multiple
+- AUTO_INCREMENT -> auto increment, can only apply to number columns
+- FOREIGN KEY -> outside constraints
+---
